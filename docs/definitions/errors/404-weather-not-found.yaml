@@ -1,0 +1,7 @@
+description: Not found
+content:
+  application/json:
+    schema:
+      $ref: './error.yaml#/Error'
+    example:
+      message: 'Weather not found.'

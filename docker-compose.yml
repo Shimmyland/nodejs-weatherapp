@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  app:
+    container_name: nodejs-weatherapp
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/nodejs-weatherapp-db
+    depends_on:
+      - postgres
+  postgres:
+    container_name: nodejs-weatherapp-db
+    image: postgres:17
+    ports: 
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nodejs-weatherapp-db

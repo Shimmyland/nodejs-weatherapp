@@ -1,0 +1,7 @@
+description: API key is missing
+content:
+  application/json:
+    schema:
+      $ref: './error.yaml#/Error'
+    example:
+      message: 'API_KEY is requered, create or modify .env file. 🍺'

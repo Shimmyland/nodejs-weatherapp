@@ -1,0 +1,44 @@
+Weather:
+    type: object
+    properties:
+        id:
+            type: integer
+            example: 1
+        city:
+            type: string
+            example: 'Prague'
+        country:
+            type: string
+            example: 'CZ'
+        temperature:
+            type: number
+            format: float
+            example: 21.5
+        forecast:
+            type: string
+            example: 'cloudy'
+        time:
+            type: string
+            format: date-time
+            example: '2024-10-01T01:11:19Z'
+
+WeatherDto:
+    type: object
+    properties:
+        city:
+            type: string
+            example: 'Prague'
+        country:
+            type: string
+            example: 'CZ'
+        temperature:
+            type: number
+            format: float
+            example: 21.5
+        forecast:
+            type: string
+            example: 'cloudy'
+        time:
+            type: string
+            format: date-time
+            example: '2024-10-01T01:11:19Z'

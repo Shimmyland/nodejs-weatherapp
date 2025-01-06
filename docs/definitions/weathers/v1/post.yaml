@@ -1,0 +1,16 @@
+tags:
+  - weathers
+summary: Save Weather record
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: '../weather.yaml#/WeatherDto'
+responses:
+  '201':
+    $ref: '../../res/201-weather-created.yaml'
+  '400':
+    $ref: '../../errors/400-invalid-request.yaml#/Val-body'
+  '422':
+    $ref: '../../errors/422-unprocessable-content.yaml#/Body-params'

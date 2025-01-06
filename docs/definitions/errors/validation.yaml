@@ -1,0 +1,10 @@
+ValidationError:
+  type: object
+  properties:
+    messages:
+      type: array
+      items:
+        type: string
+      example:
+        - 'validation error message n.1'
+        - 'validation error message n.2'

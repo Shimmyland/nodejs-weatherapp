@@ -1,0 +1,7 @@
+description: Created
+content:
+  application/json:
+    schema:
+      $ref: './msg.yaml#/Message'
+    example:
+      message: 'Weather has been created.'

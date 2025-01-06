@@ -1,0 +1,28 @@
+tags:
+  - weathers
+summary: Patch weather by given ID
+parameters:
+  - name: id
+    in: path
+    description: ID of item
+    required: true
+    schema:
+      type: integer
+      format: int64
+requestBody:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: '../weather.yaml#/WeatherDto'
+responses:
+  '204':
+    $ref: '../../res/204-no-content.yaml'
+  '400':
+    $ref: '../../errors/400-invalid-request.yaml#/Val-body-and-id'
+  '404':
+    $ref: '../../errors/404-weather-not-found.yaml'
+  '422':
+    $ref: '../../errors/422-unprocessable-content.yaml#/Body-params'
+  '500':
+    $ref: '../../errors/500-internal-service-error.yaml'

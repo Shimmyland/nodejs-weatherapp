@@ -1,0 +1,38 @@
+City-lenght:
+  description: Value of 'city' parameter out of range
+  content:
+    application/json:
+      schema:
+        $ref: './validation.yaml#/ValidationError'
+      example:
+        messages:
+        - 'city: must be between 3 and 25 characters long'
+
+Pagination:
+  description: Pagination values out of range
+  content:
+    application/json:
+      schema:
+        $ref: './validation.yaml#/ValidationError'
+      example:
+        messages:
+          - 'page: must be a number greater than 1'
+          - 'limit: must be a number between 1 and 100'
+
+Body-params:
+  description: Value of 'temperature' and 'time' parameters
+  content:
+    application/json:
+      schema:
+        $ref: './validation.yaml#/ValidationError'
+      examples:
+        temperature-out-of-range:
+          summary: Temperature (out of range)
+          value:
+            messages:
+              - 'temperature: must be a number between -432.67°F and 212°F'
+        time-in-future:
+          summary: Time (in future)
+          value:
+            messages:
+              - 'time: cannot be in the future'
