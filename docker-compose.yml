@@ -1,8 +1,7 @@
 version: '3.9'
 
 services:
-  app:
-    container_name: nodejs-weatherapp
+  api:
     build:
       context: .
     ports:
@@ -11,16 +10,21 @@ services:
       - .:/app
       - /app/node_modules
     environment:
-      NODE_ENV: development
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/nodejs-weatherapp-db
+      DB_URL: postgres://postgres:postgres@db:5432/db
     depends_on:
-      - postgres
-  postgres:
-    container_name: nodejs-weatherapp-db
+      db:
+        condition: service_healthy
+
+  db:
     image: postgres:17
     ports: 
       - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: nodejs-weatherapp-db
+      POSTGRES_DB: db
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 5s
+      timeout: 5s
+      retries: 5
