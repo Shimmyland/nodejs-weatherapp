@@ -1,24 +1,24 @@
 tags:
-  - weathers
+    - weathers
 summary: Get weather forecast of given destinantion
 parameters:
-  - name: city
-    in: query
-    description: Name of the city to get weather forecast
-    required: true
-    schema:
-      type: string
-      example: 'London'
+    - name: city
+      in: query
+      description: Name of the city to get weather forecast
+      required: true
+      schema:
+          type: string
+          example: 'London'
 responses:
-  '200':
-    $ref: '../../res/200-ok.yaml#/Single-record-api'
-  '400':
-    $ref: '../../errors/400-invalid-request.yaml#/Val-city'
-  '404':
-    $ref: '../../errors/404-weather-not-found.yaml'
-  '418':
-    $ref: '../../errors/418-im-teapot.yaml'
-  '422':
-    $ref: '../../errors/422-unprocessable-content.yaml#/City-lenght'
-  '500':
-    $ref: '../../errors/500-internal-service-error.yaml'
+    '200':
+        $ref: '../../res/200-ok.yaml#/Single-record-api'
+    '400':
+        $ref: '../../errors/400-invalid-request.yaml#/Val-city'
+    '404':
+        $ref: '../../errors/404-weather-not-found.yaml'
+    '418':
+        $ref: '../../errors/418-im-teapot.yaml'
+    '422':
+        $ref: '../../errors/422-unprocessable-content.yaml#/City-lenght'
+    '500':
+        $ref: '../../errors/500-internal-service-error.yaml'

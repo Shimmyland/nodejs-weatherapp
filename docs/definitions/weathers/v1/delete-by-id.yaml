@@ -1,20 +1,20 @@
 tags:
-  - weathers
+    - weathers
 summary: Delete Weather record by given ID
 parameters:
-  - name: id
-    in: path
-    description: ID of weather record
-    required: true
-    schema:
-      type: integer
-      format: int64
+    - name: id
+      in: path
+      description: ID of weather record
+      required: true
+      schema:
+          type: integer
+          format: int64
 responses:
-  '204':
-    $ref: '../../res/204-no-content.yaml'
-  '400':
-    $ref: '../../errors/400-invalid-request.yaml#/Val-id'
-  '404':
-    $ref: '../../errors/404-weather-not-found.yaml'
-  '500':
-    $ref: '../../errors/500-internal-service-error.yaml'
+    '204':
+        $ref: '../../res/204-no-content.yaml'
+    '400':
+        $ref: '../../errors/400-invalid-request.yaml#/Val-id'
+    '404':
+        $ref: '../../errors/404-weather-not-found.yaml'
+    '500':
+        $ref: '../../errors/500-internal-service-error.yaml'

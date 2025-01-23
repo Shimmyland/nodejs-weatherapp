@@ -2,7 +2,6 @@ import { Router } from 'express'
 import weatherController from '../controllers/v1/weathers.js'
 import validate from '../middleware/controller-validation.js'
 
-
 const router = Router()
 
 router.get('', validate.city, weatherController.getWeather)

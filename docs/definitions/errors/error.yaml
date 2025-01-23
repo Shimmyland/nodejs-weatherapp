@@ -1,6 +1,6 @@
 Error:
-  type: object
-  properties:
-    message:
-      type: string
-      example: 'Erorr message.'
+    type: object
+    properties:
+        message:
+            type: string
+            example: 'Erorr message.'

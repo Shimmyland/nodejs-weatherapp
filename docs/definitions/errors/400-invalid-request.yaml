@@ -1,129 +1,127 @@
-
 components:
-  examples:
-    id-errors:
-      summary: ID (errors)
-      value:
-        messages:
-          - 'id: is required'
-          - 'id: must be a number'
-    city-errors:
-      summary: City (errors)
-      value:
-        messages:
-          - 'city: is required'
-          - 'city: must be a string'
-          - 'city: only one city (value) is allowed'
-    country-errors:
-      summary: Country (errors)
-      value:
-        messages:
-          - 'country: is required'
-          - 'country: must be a string'
-          - 'country: only one country (value) is allowed'
-    temperature-errors:
-      summary: Temperature (errors)
-      value:
-        messages:
-          - 'temperature: is required'
-          - 'temperature: must be a number'
-          - 'temperature: must be between -432.67°F and 212°F'
-    forecast-errors:
-      summary: Forecast (errors)
-      value:
-        messages:
-          - 'forecast: is required'
-          - 'forecast: must be a string'
-          - 'forecast: cannot contain numbers'
-    time-errors:
-      summary: Time (errors)
-      value:
-        messages:
-          - 'time: is required'
-          - 'time: invalid format (ISO8601)'
-    params-as-array:
-      summary: Parameters as Arrays/Objects
-      value:
-        messages:
-          - '${NAME}: should not be an array or object'
-
+    examples:
+        id-errors:
+            summary: ID (errors)
+            value:
+                messages:
+                    - 'id: is required'
+                    - 'id: must be a number'
+        city-errors:
+            summary: City (errors)
+            value:
+                messages:
+                    - 'city: is required'
+                    - 'city: cannot contain numbers'
+                    - 'city: only one city (value) is allowed'
+        country-errors:
+            summary: Country (errors)
+            value:
+                messages:
+                    - 'country: is required'
+                    - 'country: must be a string'
+                    - 'country: only one country (value) is allowed'
+        temperature-errors:
+            summary: Temperature (errors)
+            value:
+                messages:
+                    - 'temperature: is required'
+                    - 'temperature: must be a number'
+                    - 'temperature: must be between -432.67°F and 212°F'
+        forecast-errors:
+            summary: Forecast (errors)
+            value:
+                messages:
+                    - 'forecast: is required'
+                    - 'forecast: must be a string'
+                    - 'forecast: cannot contain numbers'
+        time-errors:
+            summary: Time (errors)
+            value:
+                messages:
+                    - 'time: is required'
+                    - 'time: invalid format (ISO8601)'
+        params-as-array:
+            summary: Parameters as Arrays/Objects
+            value:
+                messages:
+                    - '${NAME}: should not be an array or object'
 
 Val-id:
-  description: Bad Request
-  content:
-    application/json:
-      schema:
-        $ref: './validation.yaml#/ValidationError'
-      examples:
-        id-example:
-          $ref: '#/components/examples/id-errors'
+    description: Bad Request
+    content:
+        application/json:
+            schema:
+                $ref: './validation.yaml#/ValidationError'
+            examples:
+                id-example:
+                    $ref: '#/components/examples/id-errors'
 
 Val-city:
-  description: Bad Request
-  content:
-    application/json:
-      schema:
-        $ref: './validation.yaml#/ValidationError'
-      examples:
-        city-example:
-          $ref: '#/components/examples/city-errors'
+    description: Bad Request
+    content:
+        application/json:
+            schema:
+                $ref: './validation.yaml#/ValidationError'
+            examples:
+                city-example:
+                    $ref: '#/components/examples/city-errors'
 
 Val-pagination:
-  description: Bad Request
-  content:
-    application/json:
-      schema:
-        $ref: './validation.yaml#/ValidationError'
-      examples:
-        page-invalid:
-          summary: Page (invalid)
-          value:
-            messages:
-            - 'page: must be a number'
-        limit-invalid:
-          summary: Limit (invalid)
-          value:
-            messages:
-            - 'limit: must be a number'
+    description: Bad Request
+    content:
+        application/json:
+            schema:
+                $ref: './validation.yaml#/ValidationError'
+            examples:
+                page-invalid:
+                    summary: Page (invalid)
+                    value:
+                        messages:
+                            - 'page: must be a number'
+                limit-invalid:
+                    summary: Limit (invalid)
+                    value:
+                        messages:
+                            - 'limit: must be a number'
 
 Val-body:
-  description: Bad Request
-  content:
-    application/json:
-      schema:
-        $ref: './validation.yaml#/ValidationError'
-      examples:
-        city-example:
-          $ref: '#/components/examples/city-errors'
-        country-example:
-          $ref: '#/components/examples/country-errors'
-        temperature-example:
-          $ref: '#/components/examples/temperature-errors'
-        forecast-example:
-          $ref: '#/components/examples/forecast-errors'
-        time-example:
-          $ref: '#/components/examples/time-errors'
-        params-as-array:
-          $ref: '#/components/examples/params-as-array'
+    description: Bad Request
+    content:
+        application/json:
+            schema:
+                $ref: './validation.yaml#/ValidationError'
+            examples:
+                city-example:
+                    $ref: '#/components/examples/city-errors'
+                country-example:
+                    $ref: '#/components/examples/country-errors'
+                temperature-example:
+                    $ref: '#/components/examples/temperature-errors'
+                forecast-example:
+                    $ref: '#/components/examples/forecast-errors'
+                time-example:
+                    $ref: '#/components/examples/time-errors'
+                params-as-array:
+                    $ref: '#/components/examples/params-as-array'
 
 Val-body-and-id:
-  description: Bad Request
-  content:
-    application/json:
-      schema:
-        $ref: './validation.yaml#/ValidationError'
-      examples:
-        id-example:
-          $ref: '#/components/examples/id-errors'
-        city-example:
-          $ref: '#/components/examples/city-errors'
-        country-example:
-          $ref: '#/components/examples/country-errors'
-        temperature-example:
-          $ref: '#/components/examples/temperature-errors'
-        forecast-example:
-          $ref: '#/components/examples/forecast-errors'
-        time-example:
-          $ref: '#/components/examples/time-errors'
-        params-as-array:
-          $ref: '#/components/examples/params-as-array'
+    description: Bad Request
+    content:
+        application/json:
+            schema:
+                $ref: './validation.yaml#/ValidationError'
+            examples:
+                id-example:
+                    $ref: '#/components/examples/id-errors'
+                city-example:
+                    $ref: '#/components/examples/city-errors'
+                country-example:
+                    $ref: '#/components/examples/country-errors'
+                temperature-example:
+                    $ref: '#/components/examples/temperature-errors'
+                forecast-example:
+                    $ref: '#/components/examples/forecast-errors'
+                time-example:
+                    $ref: '#/components/examples/time-errors'
+                params-as-array:
+                    $ref: '#/components/examples/params-as-array'

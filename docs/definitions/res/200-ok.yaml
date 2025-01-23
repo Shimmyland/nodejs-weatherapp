@@ -1,41 +1,41 @@
 Single-record-api:
-  description: Successful operation
-  content:
-    application/json:
-      schema:
-        $ref: '../weathers/weather.yaml#/WeatherDto'
+    description: Successful operation
+    content:
+        application/json:
+            schema:
+                $ref: '../weathers/weather.yaml#/WeatherDto'
 
 Single-record: #db
-  description: Successful operation
-  content:
-    application/json:
-      schema:
-        $ref: '../weathers/weather.yaml#/Weather'
-      example:
-        value:
-          id: 1
-          city: 'Prague'
-          country: 'CZ'
-          temperature: 20.5
-          forecast: 'Cloudy'
-          time: '2024-10-01T01:11:19Z'
+    description: Successful operation
+    content:
+        application/json:
+            schema:
+                $ref: '../weathers/weather.yaml#/Weather'
+            example:
+                value:
+                    id: 1
+                    city: 'Prague'
+                    country: 'CZ'
+                    temperature: 20.5
+                    forecast: 'Cloudy'
+                    time: '2024-10-01T01:11:19Z'
 
 Multiple-records: #db
-  description: Successful operation
-  content:
-    application/json:
-      schema:
-        $ref: '../weathers/weather.yaml#/Weather'
-      example:
-        - id: 1
-          city: 'Prague'
-          country: 'CZ'
-          temperature: 20.5
-          forecast: 'Cloudy'
-          time: '2024-10-01T01:11:19Z'
-        - id: 2
-          city: 'London'
-          country: 'UK'
-          temperature: 14.7
-          forecast: 'Rainy'
-          time: '2024-10-01T01:11:19Z'
+    description: Successful operation
+    content:
+        application/json:
+            schema:
+                $ref: '../weathers/weather.yaml#/Weather'
+            example:
+                - id: 1
+                  city: 'Prague'
+                  country: 'CZ'
+                  temperature: 20.5
+                  forecast: 'Cloudy'
+                  time: '2024-10-01T01:11:19Z'
+                - id: 2
+                  city: 'London'
+                  country: 'UK'
+                  temperature: 14.7
+                  forecast: 'Rainy'
+                  time: '2024-10-01T01:11:19Z'

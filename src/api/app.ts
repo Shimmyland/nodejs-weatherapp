@@ -10,11 +10,15 @@ const app = express()
 // async/await / IIFE / Top-Level await
 try {
     const swaggerDocument = await swaggerParser.bundle('./docs/swagger.yaml')
-    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, {
-        swaggerOptions: {
-            supportedSubmitMethods: []
-        }
-    }))
+    app.use(
+        '/api-docs',
+        swaggerUi.serve,
+        swaggerUi.setup(swaggerDocument, {
+            swaggerOptions: {
+                supportedSubmitMethods: []
+            }
+        })
+    )
     logger.info('Swagger documentation loaded successfully.')
 } catch (error) {
     logger.error(`Error loading Swagger documentation: ${error}`)

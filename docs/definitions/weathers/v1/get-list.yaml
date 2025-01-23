@@ -1,31 +1,31 @@
 tags:
-  - weathers
+    - weathers
 summary: List all weather records based on pagination params
 parameters:
-  - name: page
-    in: query
-    description: The page number to retrieve (optional, default is 1)
-    required: false
-    schema:
-      type: integer
-      example: 1
-      minimum: 1
-  - name: limit
-    in: query
-    description: The number of records on one page (optional, default is 10)
-    required: false
-    schema:
-      type: integer
-      example: 10
-      minimum: 1
+    - name: page
+      in: query
+      description: The page number to retrieve (optional, default is 1)
+      required: false
+      schema:
+          type: integer
+          example: 1
+          minimum: 1
+    - name: limit
+      in: query
+      description: The number of records on one page (optional, default is 10)
+      required: false
+      schema:
+          type: integer
+          example: 10
+          minimum: 1
 responses:
-  '200':
-    $ref: '../../res/200-ok.yaml#/Multiple-records'
-  '400':
-    $ref: '../../errors/400-invalid-request.yaml#/Val-pagination'
-  '404':
-    $ref: '../../errors/404-weather-not-found.yaml'
-  '422':
-    $ref: '../../errors/422-unprocessable-content.yaml#/Pagination'
-  '500':
-    $ref: '../../errors/500-internal-service-error.yaml'
+    '200':
+        $ref: '../../res/200-ok.yaml#/Multiple-records'
+    '400':
+        $ref: '../../errors/400-invalid-request.yaml#/Val-pagination'
+    '404':
+        $ref: '../../errors/404-weather-not-found.yaml'
+    '422':
+        $ref: '../../errors/422-unprocessable-content.yaml#/Pagination'
+    '500':
+        $ref: '../../errors/500-internal-service-error.yaml'

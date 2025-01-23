@@ -1,6 +1,6 @@
 Message:
-  type: object
-  properties:
-    message:
-      type: string
-      example: 'Message.'
+    type: object
+    properties:
+        message:
+            type: string
+            example: 'Message.'

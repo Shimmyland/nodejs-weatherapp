@@ -1,7 +1,7 @@
 description: Internal Server Error
 content:
-  application/json:
-    schema:
-      $ref: './error.yaml#/Error'
-    example:
-      message: 'An unexpected error occurred on the server. Please try again later.'
+    application/json:
+        schema:
+            $ref: './error.yaml#/Error'
+        example:
+            message: 'An unexpected error occurred on the server. Please try again later.'

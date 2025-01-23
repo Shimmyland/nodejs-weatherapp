@@ -1,10 +1,10 @@
 // ~/api/serializers/. not ~/database/models/. ?
 export interface WeatherDto {
-    city:string,
-    country:string,
-    temperature:number,
-    forecast:string,
-    time:Date
+    city: string
+    country: string
+    temperature: number
+    forecast: string
+    time: Date
 }
 export function serializeDto(input: Record<string, any>): WeatherDto {
     return {
@@ -17,13 +17,12 @@ export function serializeDto(input: Record<string, any>): WeatherDto {
 }
 
 export function serializePartialDto(input: Record<string, any>): Partial<WeatherDto> {
-    const allowedKeys: (keyof WeatherDto)[] = ['city', 'country', 'temperature', 'forecast', 'time'];
-  
+    const allowedKeys: (keyof WeatherDto)[] = ['city', 'country', 'temperature', 'forecast', 'time']
+
     const filteredData = Object.fromEntries(
-        Object.entries(input)
-            .filter(([key, value]) => allowedKeys.includes(key as keyof WeatherDto) && value !== undefined && value !== "")
+        Object.entries(input).filter(([key, value]) => allowedKeys.includes(key as keyof WeatherDto) && value !== undefined && value !== '')
     )
-  
+
     return {
         ...filteredData,
         temperature: filteredData.temperature !== undefined ? Number(filteredData.temperature) : undefined, // Převod temperature na number

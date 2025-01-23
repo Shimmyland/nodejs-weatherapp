@@ -1,14 +1,14 @@
 get:
-  $ref: '../definitions/weathers/v1/get.yaml'
+    $ref: '../definitions/weathers/v1/get.yaml'
 post:
-  $ref: '../definitions/weathers/v1/post.yaml'
+    $ref: '../definitions/weathers/v1/post.yaml'
 getList:
-  $ref: '../definitions/weathers/v1/get-list.yaml'
+    $ref: '../definitions/weathers/v1/get-list.yaml'
 getById:
-  $ref: '../definitions/weathers/v1/get-by-id.yaml'
+    $ref: '../definitions/weathers/v1/get-by-id.yaml'
 putById:
-  $ref: '../definitions/weathers/v1/put-by-id.yaml'
+    $ref: '../definitions/weathers/v1/put-by-id.yaml'
 patchById:
-  $ref: '../definitions/weathers/v1/patch-by-id.yaml'
+    $ref: '../definitions/weathers/v1/patch-by-id.yaml'
 deleteById:
-  $ref: '../definitions/weathers/v1/delete-by-id.yaml'
+    $ref: '../definitions/weathers/v1/delete-by-id.yaml'
