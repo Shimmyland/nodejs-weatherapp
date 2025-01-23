@@ -1,0 +1,15 @@
+chech-leaks: true
+color: true
+recursive: true
+timeout: 5000
+extension:
+    - ts
+
+require:
+    -  #'mocha-snapshots'
+    -  # 'ts-node/esm'
+    - 'ts-node/register/transpile-only'
+    - 'tsconfig-paths/register'
+    -  # './test/chai-plugins.ts'
+
+spec: ./test/**/*.spec.ts
