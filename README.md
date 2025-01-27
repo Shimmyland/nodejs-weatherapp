@@ -40,7 +40,7 @@ This app interacts with the [OpenWeatherMap API](https://openweathermap.org/api)
 3. Create `.env.prod` and `.env.test` files based on `.env-example`
 4. Run the App with Docker (start containers)
     ```bash
-    npm run api:prod
+    npm run docker:prod
     ```
 
 ## Important Information
